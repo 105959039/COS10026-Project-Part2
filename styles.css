@@ -486,73 +486,61 @@ footer {
 </style>
 //Apply styles
 <style>
-    /* Header Styles */
-    header {
-      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-      color: white;
-      padding: 20px 5%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      position: relative;
-    }
-    
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .logo {
-       width: 120px;
-       height: auto;
-    }
-    
-    .logo-text {
-      font-size: 18px;
-      font-weight: bold;
-      color: #2c3e50;
-      text-align: center;
-    }
-    
-    /* Navigation */
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-    
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-    
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-    }
-
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-      color: #2c3e50;
-      line-height: 1.6;
-      padding: 0;
-      margin: 0;
-      min-height: 100vh;
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about_body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7f9;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Navigation */
+.about_nav {
+    background-color: #2c3e50;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.about_nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.about_nav-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    background-color: #3498db;
+    transition: all 0.3s ease;
+}
+
+.about_nav-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about_nav-btn.about_active {
+    background-color: #e74c3c;
+}
+
+.about_nav-btn i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
     
     /* Main Content */
     .container {
@@ -828,4 +816,276 @@ footer {
     border: 2px solid #e2e8f0;
     resize: vertical;     /* user can resize vertically */
     font-family: inherit; /* matches other inputs */
+}
+//About styles
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about_body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7f9;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.about_header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 5px solid #3498db;
+    margin: 1rem 0 2rem 0;
+    border-radius: 8px;
+}
+
+.about_logo-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #3498db;
+}
+
+.about_logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.about_company-name {
+    font-size: 2.2rem;
+    margin-top: 0.5rem;
+    color: white;
+}
+
+/* Navigation */
+.about_nav {
+    background-color: #2c3e50;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.about_nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.about_nav-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    background-color: #3498db;
+    transition: all 0.3s ease;
+}
+
+.about_nav-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about_nav-btn.about_active {
+    background-color: #e74c3c;
+}
+
+.about_nav-btn i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Main Content */
+.about_main { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem; 
+    margin-bottom: 2rem; 
+}
+
+.about_section { 
+    background-color: white; 
+    padding: 1.5rem; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.about_h2 { 
+    color: #2c3e50; 
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 0.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.about_h3 { 
+    color: #4a6491; 
+    margin: 1rem 0; 
+}
+
+.about_group-info { 
+    background-color: #e8f4fc; 
+    border-left: 5px solid #3498db; 
+}
+
+.about_nested-list { 
+    margin-left: 1.5rem; 
+}
+
+.about_nested-list ul { 
+    margin-left: 1.5rem; 
+    margin-top: 0.5rem; 
+}
+
+.about_student-ids { 
+    text-align: right; 
+    font-family: monospace; 
+    background-color: #f9f9f9; 
+    padding: 0.75rem 1rem; 
+    border-radius: 5px; 
+    border-left: 3px solid #3498db; 
+    margin: 1rem 0; 
+    font-weight: bold; 
+}
+
+.about_contributions dl { 
+    display: grid; 
+    grid-template-columns: auto 1fr; 
+    gap: 0.5rem 1.5rem; 
+}
+
+.about_contributions dt { 
+    font-weight: bold; 
+    color: #2c3e50; 
+    grid-column: 1; 
+}
+
+.about_contributions dd { 
+    margin: 0; 
+    grid-column: 2; 
+}
+
+.about_group-photo {
+    text-align: center; /* Center the figure and caption */
+    margin-bottom: 40px;
+}
+
+.about_group-photo figure.team-photo {
+    display: inline-block; /* Shrinks figure to image size */
+    margin: 0 auto 20px;   /* Center and add space below */
+}
+
+.about_group-photo img {
+    width: 300px;          /* Adjust as needed */
+    max-width: 90%;        /* Responsive on smaller screens */
+    height: auto;          /* Maintain aspect ratio */
+    border-radius: 10px;   /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Optional styling */
+}
+
+.about_group-photo figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+.about_interests { 
+    overflow-x: auto; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.about_interests table { 
+    width: 90%; 
+    border-collapse: collapse; 
+    margin: 1rem 0; 
+    background-color: white; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.about_interests .about_team-skills { 
+    background-color: #d4edff; 
+    font-weight: bold; 
+}
+
+.about_interests caption { 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    color: #2c3e50; 
+    margin-bottom: 0.5rem; 
+    caption-side: top; 
+    text-align: center; 
+}
+
+.about_interests th, .about_interests td { 
+    padding: 0.75rem; 
+    text-align: left; 
+    border: 1px solid #ddd; 
+}
+
+.about_interests th { 
+    background-color: #3498db; 
+    color: white; 
+    font-weight: bold; 
+}
+
+.about_interests tr:nth-child(even) { 
+    background-color: #f2f2f2; 
+}
+
+.about_interests tr:hover { 
+    background-color: #e6f7ff; 
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about_nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about_nav-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+    
+    .about_group-photo figure { 
+        float: none; 
+        margin: 1rem auto; 
+    }
+    
+    .about_contributions dl { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .about_contributions dt, .about_contributions dd { 
+        grid-column: 1; 
+    }
+    
+    .about_contributions dt { 
+        margin-top: 0.5rem; 
+        border-bottom: 1px dashed #ccc; 
+        padding-bottom: 0.25rem; 
+    }
+    
+    .about_interests table { 
+        font-size: 0.85rem; 
+    }
 }
