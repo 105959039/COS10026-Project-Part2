@@ -63,4 +63,21 @@ function getJobsByCategory($category) {
     
     return $jobs;
 }
+
+// Simple database connection
+function getDBConnection() {
+    $host = 'localhost';
+    $dbname = 'quantumaxis_db';
+    $username = 'quantumaxis_user';
+    $password = 'quantumaxis_password123';
+    
+    try {
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $pdo;
+    } catch (PDOException $e) {
+        error_log("Database connection failed: " . $e->getMessage());
+        return null;
+    }
+}
 ?>

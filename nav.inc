@@ -1,5 +1,5 @@
 <div id="menu">
-    <img src="QAE logo.png" alt="Logo">
+    <img src="images/QAE logo.png" alt="Logo">
     <a class="ridge" href="index.php">Home</a>
     <a class="ridge" href="jobs.php">Careers</a>
     <a class="ridge" href="apply.php">Application</a>
