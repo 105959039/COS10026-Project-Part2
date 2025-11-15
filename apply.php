@@ -8,7 +8,7 @@ include 'nav.inc';
     <div class="form-container">
         <h1>Job Application Form</h1>
 
-        <form name="Job Application" id="jobapp" action="process_eoi.php" method='post'>
+        <form name="Job Application" id="jobapp" action="process_eoi.php" method='post' novalidate="novalidate">
             <div class="form-section">
                 <h3 class="form-section-title">Position Information</h3>
                 <div class="form-group">
