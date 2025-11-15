@@ -15,17 +15,15 @@ $jobCount = count($jobs);
 include 'header.inc';
 // Include menu
 include 'nav.inc';
-// Include styles
-include 'style.inc';
 ?>
 
-<div class="container">
-    <div class="job-count">
+<div class="jobs_container">
+    <div class="jobs_job-count">
         <strong><?php echo $jobCount; ?> Job Position<?php echo $jobCount !== 1 ? 's' : ''; ?> Available</strong>
     </div>
     
-    <div class="content-wrapper">
-        <div class="main-content">
+    <div class="jobs_content-wrapper">
+        <div class="jobs_main-content">
             <?php if ($jobCount > 0): ?>
                 <?php foreach ($jobs as $job): ?>
                     <?php
@@ -35,15 +33,15 @@ include 'style.inc';
                     $preferableQualifications = json_decode($job['preferable_qualifications'], true) ?: [];
                     ?>
                     
-                    <section>
-                        <h2><i class="<?php echo htmlspecialchars($job['icon_class']); ?>"></i> <?php echo htmlspecialchars($job['title']); ?></h2>
-                        <div class="decorative-bar"></div>
+                    <section class="jobs_section">
+                        <h2 class="jobs_h2"><i class="<?php echo htmlspecialchars($job['icon_class']); ?>"></i> <?php echo htmlspecialchars($job['title']); ?></h2>
+                        <div class="jobs_decorative-bar"></div>
                         <p><strong>Reference Number:</strong> <?php echo htmlspecialchars($job['reference_number']); ?></p>
 
-                        <h3>Position Overview</h3>
+                        <h3 class="jobs_h3">Position Overview</h3>
                         <p><?php echo htmlspecialchars($job['overview']); ?></p>
 
-                        <div class="highlight">
+                        <div class="jobs_highlight">
                             <p><strong>Job type:</strong> <?php echo htmlspecialchars($job['job_type']); ?></p>
                             <p><strong>Category:</strong> <?php echo htmlspecialchars($job['category']); ?></p>
                             <p><strong>Salary Range:</strong> <?php echo htmlspecialchars($job['salary_range']); ?></p>
@@ -51,7 +49,7 @@ include 'style.inc';
                         </div>
 
                         <?php if (!empty($responsibilities)): ?>
-                        <h3>Key Responsibilities</h3>
+                        <h3 class="jobs_h3">Key Responsibilities</h3>
                         <ul>
                             <?php foreach ($responsibilities as $responsibility): ?>
                                 <li><?php echo htmlspecialchars($responsibility); ?></li>
@@ -60,8 +58,8 @@ include 'style.inc';
                         <?php endif; ?>
 
                         <?php if (!empty($essentialQualifications)): ?>
-                        <h3>Required Qualifications</h3>
-                        <h4>Essential</h4>
+                        <h3 class="jobs_h3">Required Qualifications</h3>
+                        <h4 class="jobs_h4">Essential</h4>
                         <ol>
                             <?php foreach ($essentialQualifications as $qualification): ?>
                                 <li><?php echo htmlspecialchars($qualification); ?></li>
@@ -70,7 +68,7 @@ include 'style.inc';
                         <?php endif; ?>
 
                         <?php if (!empty($preferableQualifications)): ?>
-                        <h4>Preferable</h4>
+                        <h4 class="jobs_h4">Preferable</h4>
                         <ul>
                             <?php foreach ($preferableQualifications as $qualification): ?>
                                 <li><?php echo htmlspecialchars($qualification); ?></li>
@@ -80,16 +78,16 @@ include 'style.inc';
                     </section>
                 <?php endforeach; ?>
             <?php else: ?>
-                <section>
-                    <h2>No Job Positions Available</h2>
+                <section class="jobs_section">
+                    <h2 class="jobs_h2">No Job Positions Available</h2>
                     <p>Currently, there are no open positions. Please check back later for new opportunities.</p>
                 </section>
             <?php endif; ?>
         </div>
 
         <!-- Aside Section for Additional Information -->
-        <div class="aside-container">
-            <aside>
+        <div class="jobs_aside-container">
+            <aside class="jobs_aside">
                 <h3><i class="fas fa-lightbulb"></i> Application Tips</h3>
                 <p>To improve your chances of being selected, make sure to:</p>
                 <ul>
@@ -108,5 +106,4 @@ include 'style.inc';
         </div>
     </div>
 </div>
-
-<?php include 'footer.inc'; ?>
+<?php include('footer.inc'); ?>

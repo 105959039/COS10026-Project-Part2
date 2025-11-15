@@ -1,7 +1,7 @@
 <?php
 // apply.php - Job Application Form
 include 'header.inc';  // Contains opening <html>, <head>, <body> with navigation
-include 'style.inc';   // Contains all CSS
+include 'nav.inc';
 ?>
 
 <div class="container">
@@ -130,13 +130,7 @@ include 'style.inc';   // Contains all CSS
         </form>
     </div>
 
-    <div class="social-links">
-        <a href="https://www.facebook.com/profile.php?id=61580514305943" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/quantumaxis/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
-</div>
+
 
 <?php
 include 'footer.inc';

@@ -16,4 +16,51 @@ if ($conn->connect_error) {
 $conn->set_charset("utf8mb4");
 
 // You can use $conn in other included PHP files after this
+
+// Function to get all jobs
+function getAllJobs() {
+    global $conn;
+    
+    // Get ALL jobs (no is_active filter since column doesn't exist)
+    $sql = "SELECT * FROM jobs ORDER BY posted_date DESC";
+    $result = $conn->query($sql);
+    
+    $jobs = [];
+    if ($result && $result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $jobs[] = $row;
+        }
+    }
+    
+    return $jobs;
+}
+
+// Function to get job by reference number
+function getJobByReference($reference) {
+    global $conn;
+    
+    $stmt = $conn->prepare("SELECT * FROM jobs WHERE reference_number = ?");
+    $stmt->bind_param("s", $reference);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    return $result->fetch_assoc();
+}
+
+// Function to get jobs by category
+function getJobsByCategory($category) {
+    global $conn;
+    
+    $stmt = $conn->prepare("SELECT * FROM jobs WHERE category = ? ORDER BY posted_date DESC");
+    $stmt->bind_param("s", $category);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    $jobs = [];
+    while ($row = $result->fetch_assoc()) {
+        $jobs[] = $row;
+    }
+    
+    return $jobs;
+}
 ?>
