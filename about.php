@@ -53,22 +53,23 @@ if ($pdo) {
         <p><strong>Tutor's Name:</strong> <?php echo htmlspecialchars($teamData['tutor_name'] ?? 'Ms. Pawani T. Rasaratnam'); ?></p>
     </section>
     
-    <section class="about_contributions">
-        <h2>Members Contribution</h2>
-        <dl>
-            <?php if (!empty($members)): ?>
-                <?php foreach ($members as $member): ?>
-                    <dt><?php echo htmlspecialchars($member['full_name']); ?></dt>
-                    <dd><?php echo htmlspecialchars($member['contribution']); ?></dd>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <dt>Wong Jia Lun</dt><dd>PHP Home page, CSS styling, Job application</dd>
-                <dt>Shariar Oasib Shikto</dt><dd>PHP Job Description, CSS Styling, Job Application</dd>
-                <dt>Ng Ting Xuan</dt><dd></dd>
-                <dt>Mohammad Fatin Anjum Fahim</dt><dd>PHP About page, CSS Styling, Validation</dd>
-            <?php endif; ?>
-        </dl>
-    </section>
+   <section class="about_contributions">
+    <h2>Members Contribution</h2>
+    <dl>
+        <dt>Wong Jia Lun</dt>
+        <dd>PHP Home page, CSS styling, Job application</dd>
+
+        <dt>Shariar Oasib Shikto</dt>
+        <dd>PHP Job Description, CSS Styling, Job Application</dd>
+
+        <dt>Ng Ting Xuan</dt>
+        <dd></dd>
+
+        <dt>Mohammad Fatin Anjum Fahim</dt>
+        <dd>PHP About page, CSS Styling, Validation</dd>
+    </dl>
+</section>
+
     
 <section class="about_group-photo">
     <h2>Our Team</h2>
